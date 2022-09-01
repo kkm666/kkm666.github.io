@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+   margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1,h2{
+    color:#3f5a77;
+}
+ul{
+    padding: 0;
+    margin: 0;
+   list-style:none;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+header .container{
+    height: 93px;
+    width: 1200px;
+    margin:auto;
+}
+header .left>img{
+    width: 391px;
+    height: 93px;
+}
+
+header .right>img{
+width: 274px;
+height: 35px;
+margin-top:calc( (93px - 35px)/2);
+
+}
+header{
+    margin-bottom: 10px;
+}
+nav{
+    height: 44px;
+    width: 100%;
+    background: #3f5a77;
+}
+nav .container{
+    width: 1200px;
+    margin:auto;
+}
+nav .container .left li{
+    float:left;
+    width: 80px;
+    margin-right: 40px;
+    margin-top: -12px;
+    line-height:44px;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 44px;
+}
+nav .container .left li:hover{
+background: #00a0ea;
+}
+nav .container .left li:first-child{
+    background: #00a0ea;
+    }
+nav>.container .left>ul::after{
+    display: block;
+    content: "";
+    clear: both;
+
+}
+nav .center{
+    padding: calc(( 44px - 20px )/2);
+}
+nav .right{
+    margin-top:-5px ;
+}
+nav .right>input{
+    width:160px;
+  
+    padding: 0px 20px;
+    height: 30px;
+    outline: none;
+    border: #999;
+}
+nav .center .search{
+    position:relative;
+    top:-5px;
+    right: -200px;
+    width: 30px;
+    height: 30px;
+    background:#00a0ea;
+}
+nav .center .left .tuo{
+    position: absolute;
+    display: none;
+}
+nav .center .left>ul>li:hover .tuo{
+    display: block;
+    background: #0099ff;
+    /* margin-left: -10px; */
+    /* margin-right: 0px; */
+}
+nav .center .left li{
+    margin-right: 0px;
+}
+nav .center .left>ul>li{
+    margin-right: 50px;
+
+}
+nav .center .left>ul>li:hover>.tuo>li:hover{
+    background: #3f5a77;
+}
+nav .center .search>img{
+box-sizing: border-box;
+padding: 7px;
+}
+.banner>.container{
+    width: 1920px;
+    margin: auto;
+}
+main .container{
+    width: 1200px;
+    margin: auto;
+}
+main .content1{
+    margin-top:100px;
+
+}
+main .content1 .right1{
+    width: 660px;
+    text-align: justify;
+}
+main .content1 .top{
+margin-bottom:60px;
+border-bottom:1px solid ;
+}
+main .content1 .top .left{
+    border-bottom:10px solid #3f5a77;
+
+}
+main .content1 .top .right{
+    font-size: 12px;
+  position:relative;
+  top:26px;
+  right:0;
+}
+
+
+main .content1 .top::after{
+content:"";
+display: block;
+clear: both;
+}
+main .content1  .right1 p{
+text-indent: 2em;
+}
+main .content1  .right1 .bottomr{
+color:#00a0ea;
+margin-top: 30px;
+}
+main .content1::after{
+    display: block;
+    clear:both;
+    content:"";
+}
+main .content1{
+    margin-bottom:60px;
+}
+
+
+
+main .content2>.top1>.left,
+main .content2>.top1>.right{
+    border-bottom: 1px solid #999;
+    width: 550px;
+}
+main .content2>.top1{
+    margin-bottom:20px;
+}
+main .content2>.top1>.left{
+    height: 32px;
+}
+main .content2>.top2>ul{
+    width: 640px;
+    margin: auto;
+    margin-bottom:60px;
+
+}
+main .content2>.top2>ul::after{
+display: block;
+clear: both;
+content:"";
+}
+main .content2>.top2>ul>li{
+    text-align: center;
+    float:left;
+    width: calc((640px/5));
+}
+main .content2>.top2>ul>li:hover{
+    color: #00a0ea;
+}
+main .content2>.top3>div{
+    margin-left:10px;
+    margin-bottom: 100px;
+
+}
+main .content2>.top3 .divr{
+    color: #00a0ea;
+    margin-top: 20px;
+}
+main .content2>.top3  .top .left,
+main .content2>.top3 .top .right{
+    border-bottom: 1px solid #999;
+    width: 550px;
+}
+main .content2>.top3 .lp{
+    text-indent: 2em;
+    line-height: 25px;
+    margin-top:20px;
+    
+}
+main .content2>.top3 {
+    margin-bottom:20px;
+}
+main .content2>.top3 .top .left{
+    height: 32px;
+}
+main .content2>.top3 .left .r{
+    width: 360px;
+    margin-left: 20px;
+}
+main .content2>.top3  .right{
+    width: 520px;
+    line-height: 40px;
+}
+main::after
+{
+    display: block;
+    clear: both;
+    content:"";
+}
+.bottomf{
+    width: 1200px;
+    margin:0px auto 100px;
+}
+.top6 .left,
+.top6 .right{
+    border-bottom: 1px solid #999;
+    width: 550px;
+}
+.top6>.left{
+    height: 32px;
+}
+.top6{
+    margin-bottom: 60px;
+}
+.bottomf .bt{
+    height: 433px;
+    width: 433px;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.bottom{
+    position: relative;
+}
+.bottom{
+    color: white;;
+}
+.bottom .div1{
+    width: 150px;
+    height: 150px;
+    margin:60px auto 46px;
+}
+.bottom .div2{
+    margin-left: 40px;
+line-height: 30px;
+}
+
+footer{
+    background:#3f5a77 ;
+    color: white;
+}
+footer .container{
+    margin: auto;
+    width: 1200px;
+}
+footer .container>div{
+    width: 750px;
+    margin:auto;
+}

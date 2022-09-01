@@ -1,0 +1,56 @@
+main .container{
+    width: 1200px;
+    margin:auto;
+}
+nav .container .left li:nth-child(3){
+    background: #09f;
+
+}
+main .container>.top {
+
+
+    margin-top: 30px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid#09f;
+
+}
+main .bottom .left img{
+    margin: 20px 20px 90px 40px;
+    width: 530px;
+    /* height: 510px; */
+}
+
+main .bottom .right{
+/* margin-top:px; */
+
+width: 600px;
+}
+main .bottom .right>p{
+    text-indent: 2em;
+    margin-top:20px;
+    line-height: 22px;
+    text-align: justify;
+}
+main .bottom .right>h4:first-child{
+margin-bottom:15px;
+}
+main .bottom .right>h4{
+    margin-top: 6px;
+    letter-spacing: 2px;
+}
+main span{
+    color:#09f;
+}
+main::after{
+    display: block;
+    content:"";
+    clear: both;
+
+}
+main .bottom .right{
+    font-size: 13px;
+}
+footer{
+    margin-top:0px;
+}

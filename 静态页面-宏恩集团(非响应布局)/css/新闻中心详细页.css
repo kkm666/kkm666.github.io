@@ -1,0 +1,20 @@
+main .container .content{
+    width: 1200px;
+}
+main .container .top1{
+    margin-top: 40px;
+    margin-left:30px;
+    margin-bottom:30px;
+    
+}
+main .container .line1>p{
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+main .container .line1{
+    margin-bottom:46px;
+}
+main .container .line1>div{
+    text-align: center;
+    margin-top: 10px;
+}

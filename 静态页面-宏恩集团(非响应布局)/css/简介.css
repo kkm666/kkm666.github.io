@@ -1,0 +1,77 @@
+main .container{
+    margin:auto;
+    width: 1200px;
+
+}
+main .container>.content{
+    width: 930px;
+
+}
+main .container>.content>.top{
+    letter-spacing: 2px;
+
+    width: 1000px;
+    border-bottom:1px solid #09f ;
+}
+main>.nav1{
+    position:absolute;
+    top:-85px;
+    left:220px;
+}
+main .container>.content>.top>span{
+    color:#09f;
+    margin-left:10px;
+
+}
+main .container>.content>.center>h1{
+    margin:60px auto 40px;
+    text-align: center;
+}
+main .container>.content>.center>p{
+    margin-top:10px;
+    text-indent:2em;
+    text-align: justify;
+    line-height:30px;
+}
+main .container>.content>.bottom{
+    margin-top:60px;
+    margin-bottom:60px;
+}
+main::after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.banner{
+    margin-bottom:40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
