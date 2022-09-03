@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            /* background: pink; */
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            position: relative;
+        }
+        .boxx {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+        }
+        .boxx div {
+            
+            flex-shrink: 0;
+            /* background: pink; */
+            display: flex;
+            /* flex-wrap:wrap; */
+            /* outline: 1px solid saddlebrown; */
+        }
+
+        .boxx div div {
+            width: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        span {
+            display: block;
+            width: 30%;
+            height: 33px;
+            transition: all 0.6s;
+            transform: scale(0.5);
+        }
+
+        span.bg {
+            transform: scale(1);
+            outline: 1px solid pink;
+            display: block;
+            width: 30%;
+            height: 33px;
+            background: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxx">
+        <div class="hh">
+            <div class="s1"></div>
+            <div class="s2"></div>
+        </div>
+        <div class="mm">
+            <div class="s1"></div>
+            <div class="s2"></div>
+        </div>
+
+        <div class="ss">
+            <div class="s1"></div>
+            <div class="s2"></div>
+        </div>
+    </div>
+
+    <script>
+        var arr = [
+            [
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 0, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+            ],
+            [
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+            ],
+            [
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1],
+                [1, 0, 0],
+                [1, 1, 1],
+            ],
+            [
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1],
+            ],
+            [
+                [1, 0, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 0],
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1],
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 0],
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+            ],
+            [
+                [1, 1, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1],
+            ],
+
+        ]
+        var bhh = document.querySelector(".hh").querySelectorAll("div");
+        var bmm = document.querySelector(".mm").querySelectorAll("div");
+        var bss = document.querySelector(".ss").querySelectorAll("div");
+        console.log(bss[0])
+        function num0(box) {
+            arr[0].forEach(function (row, rowi) {
+                row.forEach(function (e, i) {
+                    var span = document.createElement("span");
+                    if (e) {
+                        span.classList.add("bg");
+                    }
+                    box.appendChild(span);
+                })
+            });
+        }
+        bhh.forEach(function (e) {
+            num0(e);
+        })
+        bmm.forEach(function (e) {
+            num0(e);
+        })
+        bss.forEach(function (e) {
+            num0(e);
+        })
+
+        function show(span, n) {
+            arr[n].forEach(function (row, rowi) {
+                row.forEach(function (e, i) {
+                    if (e) {
+                        span[rowi * 3 + i].classList.add("bg")
+                    }
+                    else {
+                        span[rowi * 3 + i].classList.remove("bg")
+
+                    }
+                })
+            })
+        }
+        setInterval(function () {
+            var date = new Date();
+            var hh = String(date.getHours()).padStart(2, "0");
+            var mm = String(date.getMinutes()).padStart(2, "0")
+            var ss = String(date.getSeconds()).padStart(2, "0")
+
+            bhh.forEach(function (e, i) {
+                h1span = e.querySelectorAll("span");
+                show(h1span, hh[i])
+            })
+            bmm.forEach(function (e, i) {
+                m1span = e.querySelectorAll("span");
+                show(m1span, mm[i])
+            })
+            bss.forEach(function (e, i) {
+                s1span = e.querySelectorAll("span");
+                show(s1span, ss[i])
+            })
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
