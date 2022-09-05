@@ -1,17 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size:calc(100vw/375)">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .left {
+            width: 30%;
+            /* height: 100vh; */
+            background-color: pink;
+        }
+
+        .left .ltop {
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 3px;
+            width: 30rem;
+            text-align: center;
+            margin: 10rem auto;
+            padding: 3rem;
+
+        }
+
+        @keyframes logo {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .left img {
+            width: 100%;
+            border-radius: 50%;
+            display: block;
+            animation: logo 6s linear infinite;
+        }
+
+        .left .content {
+            padding: 6rem;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+
+        .left .content h1 {
+            text-align: center;
+            font-size: 7rem;
+        }
+
+        .left .content>div {
+            border-radius: 3px;
+            margin-top: 3rem;
+            box-shadow: 0 0 3px gray;
+            background-color: aquamarine;
+            padding: 1rem 0;
+            cursor: pointer;
+        }
+
+        .left .content>div:hover {
+            box-shadow: 0 0 13px gray;
+            /* background-color: aliceblue; */
+        }
+
+        .right {
+            width: 100%;
+            background-color: aqua;
+        }
+    </style>
 </head>
+
 <body>
+
+    <div class="left">
+        <div class="ltop">
+            <img src="./image/ke.jpg" alt="">
+        </div>
+        <div class="content all">
+            <div class="bootstrap">
+                <h1>Bootstrap</h1>
+            </div>
+            <div class="js">
+                <h1>JS</h1>
+            </div>
+            <div class="jquery">
+                <h1>jQuery</h1>
+            </div>
+            <div class="css3">
+                <h1>CSS3</h1>
+            </div>
+            <div class="vue">
+                <h1>Vue</h1>
+            </div>
+
+
+        </div>
+    </div>
+    <style>
+        .right>div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+
+        }
+
+        img {
+            width: 100%;
+            border-radius: 6rem;
+        }
+
+        .right .rl .container .imgg {
+            margin-top: 10rem;
+        }
+
+        .itembs {
+            display: none;
+        }
+    </style>
+    <div class="right">
+        <div class="rl">
+            <div class="container rall">
+
+                <div class="row itembs">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                        <a href="/bs/整容/1.html"> <img src="./image/zx.jpg" alt=""></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                        <a href="/bs/服装/index.html"> <img src="./image/fz.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="row itembs">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 imgg">
+                     <img src="./image/fksz.jpg" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 imgg">
+                       <img src="./image/cj.jpg" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 imgg">
+                       <img src="./image/gqds.jpg" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 imgg">
+                       <img src="./image/jykp.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row itembs">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                     <img src="./image/sfq.jpg" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                     <img src="./image/fdj.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row itembs">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                        <img src="./image/css3jx.jpg" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                        css3
+                    </div>
+                </div>
+                <div class="row itembs">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                        vue
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
+                        vue
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var bs = document.querySelector(".itembs");
+        var all = document.querySelectorAll(".left .all>div");
+        var rall = document.querySelectorAll(".right .rall>div");
+
+        all.forEach(function (e, i) {
+            e.onclick = function () {
+                rall.forEach(function (ee, ii) {
+                    rall[ii].style.display = "none";
+                    all[ii].style.backgroundColor = "aquamarine";
+                })
+                rall[i].style.display = "block";
+                all[i].style.backgroundColor = "antiquewhite";
+            }
+        })
+
+
+
+    </script>
+
+    <!-- 
+    <h1></h1>
+    <h1><a href="/bs/服装">服装</a></h1>
     <h1><a href="/jq/放大镜.html">放大镜</a></h1>
     <h1><a href="/jq/手风琴.html">手风琴</a></h1>
-    <h1><a href="/css3/ihover 矩形.html">ihover 矩形git</a></h1>
-    <h1><a href="/360/360.html">360</a></h1>
-    <h1><a href="/bs/整容/1.html">整容</a></h1>
-    <h1><a href="/bs/服装">服装</a></h1>
+    <h1><a href="/css3/ihover 矩形.html">ihover 矩形</a></h1>
+    <h1><a href="/360/360.html">360</a></h1> -->
+
+
 </body>
+
 </html>

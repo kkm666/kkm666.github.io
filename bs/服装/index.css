@@ -394,8 +394,10 @@ header .content .but:hover {
   height: 400px;
 }
 .styles .row .item {
+  margin-top: 13px;
   height: 100%;
   overflow: hidden;
+  color: #000;
 }
 .styles .row .item img {
   width: 100%;
@@ -517,8 +519,11 @@ footer .bg .foot {
   text-align: center;
   margin: 33px;
 }
+footer .bg .item {
+  line-height: 30px;
+}
 footer p {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 .mao {
   display: block;

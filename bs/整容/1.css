@@ -559,7 +559,7 @@ footer .container-fluid .rowe::after {
   background-image: url(image/gallery-7.jpg);
   background-size: cover;
 }
-.imgs .item4 {
+.imgs .item4 .itt4 {
   height: 679px;
   margin-top: 13px;
   background-image: url(image/gallery-4.jpg);

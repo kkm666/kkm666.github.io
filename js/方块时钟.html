@@ -13,22 +13,25 @@
             flex-wrap: wrap;
             /* background: pink; */
         }
-        body{
+
+        body {
             margin: 0;
             padding: 0;
             width: 100%;
             position: relative;
         }
+
         .boxx {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            
+
 
         }
+
         .boxx div {
-            
+
             flex-shrink: 0;
             /* background: pink; */
             display: flex;
@@ -58,6 +61,19 @@
             height: 33px;
             background: aqua;
         }
+
+        .dot {
+
+            flex-direction: column;
+        }
+
+        p.sp {
+            outline: 1px solid pink;
+            background: pink;
+            width: 33px;
+            height: 33px;
+            margin: 33px;
+        }
     </style>
 </head>
 
@@ -67,11 +83,18 @@
             <div class="s1"></div>
             <div class="s2"></div>
         </div>
+        <div class="dot">
+            <p class="sp"></p>
+            <p class="sp"></p>
+        </div>
         <div class="mm">
             <div class="s1"></div>
             <div class="s2"></div>
         </div>
-
+        <div class="dot">
+            <p class="sp"></p>
+            <p class="sp"></p>
+        </div>
         <div class="ss">
             <div class="s1"></div>
             <div class="s2"></div>
