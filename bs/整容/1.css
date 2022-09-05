@@ -320,6 +320,13 @@ nav .header .header_nav .nav ul div.btn a {
 .banner .container-fluid .row {
   margin-top: 20%;
 }
+.banner .container-fluid .row button {
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #0c5d69;
+}
 .consultation {
   margin-top: 22px;
 }
@@ -331,10 +338,16 @@ nav .header .header_nav .nav ul div.btn a {
 }
 .consultation .item1 div input,
 .consultation .item1 div select {
+  padding-left: 20px;
   box-sizing: border-box;
   margin-top: 20px;
   width: 100%;
   height: 3em;
+}
+.consultation .item1 .input > input {
+  border: 0;
+  border-radius: 6px;
+  background-color: #1f8797;
 }
 .consultation .item2,
 .consultation .item3 {
@@ -361,6 +374,9 @@ nav .header .header_nav .nav ul div.btn a {
 .container .choose .row {
   text-align: center;
 }
+.container .choose .item {
+  margin: 33px 0;
+}
 .container-fluid.cons {
   background-image: url(image/services-bg.jpg);
 }
@@ -374,17 +390,29 @@ nav .header .header_nav .nav ul div.btn a {
   text-align: left;
 }
 .container-fluid .services .left h1 {
-  margin: 0;
   color: #fff;
 }
+.container-fluid .services .left h1 p {
+  font-size: 2rem;
+  color: #033942;
+}
 .container-fluid .services .right button {
+  margin-top: 33px;
+  color: white;
+  border: 3px solid #1f8797;
+  padding: 10px 20px;
+  border-radius: 10px;
   background-color: transparent;
-  padding: 10px;
   width: 100%;
 }
 .container-fluid .services .items {
+  transition: all 2s;
   background: #fff;
   padding: 30px;
+}
+.container-fluid .services .items:hover {
+  background-color: #1f8797;
+  color: white;
 }
 .container-fluid .services::after {
   content: "";
@@ -393,6 +421,21 @@ nav .header .header_nav .nav ul div.btn a {
 }
 .doctors .row div {
   text-align: center;
+}
+.doctors .row i {
+  margin-left: 13px;
+  color: #056171;
+}
+.doctors .row .imgk {
+  transition: all 2s;
+  border-radius: 50%;
+  padding: 13px;
+}
+.doctors .row .imgk img {
+  width: 100%;
+}
+.doctors .row .imgk:hover {
+  background: #033942;
 }
 .skin {
   margin-top: 50px;
@@ -410,24 +453,61 @@ nav .header .header_nav .nav ul div.btn a {
 }
 .skin .row .right button {
   background-color: transparent;
-  padding: 10px;
+  border: 2px solid #056171;
+  border-radius: 3px;
+  padding: 6px 10px;
   width: 100%;
 }
 .skin .row .bitems {
   margin: 60px 0;
 }
 .skin .row .bitems .items {
+  transition: all 2s;
   box-shadow: 0 0 3px black;
   padding: 30px;
   margin: 20px 0;
+}
+.skin .row .bitems .items:hover {
+  box-shadow: 0 0 13px black;
+}
+.skin .row .bitems .items:hover a {
+  text-decoration: underline;
 }
 footer .container-fluid {
   padding: 60px 0;
   background-color: #121C1D;
   text-align: center;
+  position: relative;
+}
+footer .container-fluid .logo {
+  margin-top: 33px;
+  line-height: 44px;
+}
+footer .container-fluid input {
+  box-sizing: border-box;
+  margin-top: 33px;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #047487;
+  outline: 0;
+}
+footer .container-fluid .sub {
+  background: #047487;
+  color: white;
+  border-radius: 0 50px 50px 0;
+  padding: 12px;
+  position: absolute;
+  top: 33px;
+  right: 16px;
 }
 footer .container-fluid .icon {
+  margin-top: 20px;
   color: white;
+}
+footer .container-fluid .icon i {
+  margin: 33px 13px;
 }
 footer .container-fluid .text {
   margin-top: 66px;
@@ -451,7 +531,38 @@ footer .container-fluid .rowe::after {
   content: "";
   clear: both;
 }
-.imgs img {
-  width: 100%;
+.imgs .items > div {
+  height: 333px;
+  margin-top: 13px;
+}
+.imgs .items > div:nth-child(1) {
+  background-image: url(image/gallery-1.jpg);
+  background-size: cover;
+}
+.imgs .items > div:nth-child(2) {
+  background-image: url(image/gallery-2.jpg);
+  background-size: cover;
+}
+.imgs .items > div:nth-child(3) {
+  background-image: url(image/gallery-3.jpg);
+  background-size: cover;
+}
+.imgs .items > div:nth-child(4) {
+  background-image: url(image/gallery-5.jpg);
+  background-size: cover;
+}
+.imgs .items > div:nth-child(5) {
+  background-image: url(image/gallery-6.jpg);
+  background-size: cover;
+}
+.imgs .items > div:nth-child(6) {
+  background-image: url(image/gallery-7.jpg);
+  background-size: cover;
+}
+.imgs .item4 {
+  height: 679px;
+  margin-top: 13px;
+  background-image: url(image/gallery-4.jpg);
+  background-size: cover;
 }
 /*# sourceMappingURL=./1.css.map */

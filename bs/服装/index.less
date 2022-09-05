@@ -33,6 +33,110 @@ img {
     width: 100%;
 }
 
+.box {
+    background: red;
+    margin-top: -10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        transition: all 1s;
+        transform-origin: 0% 50%;
+        margin: 3px;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+
+        /* background-color: #000; */
+
+    }
+
+    .click {
+        p {
+            &:nth-child(1) {
+                /* background: pink; */
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                position: relative;
+                top: 5px;
+                /* background: pink; */
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.clicks {
+    overflow: hidden;
+    position: absolute;
+    top: 77px;
+    height: 0;
+    transition: all 2s;
+    color: #000 !important;
+    text-align: center;
+    width: 100%;
+    background: #fff;
+
+    p {
+        cursor: pointer;
+        transition: all 2s;
+
+        &:nth-child(1) {
+            margin-top: 33px;
+        }
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.searchs {
+    height: 40px;
+    top: 0px;
+    right: 15px;
+    font-size: 12px;
+    border-radius: 0 30px 30px 0;
+    text-align: center;
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 40px;
+        background-color: rgba(221, 221, 221, 0.731);
+        border: 0;
+        border-radius: 30px;
+        outline: 0;
+        padding-left: 20px;
+
+
+    }
+
+    i {
+        display: inline-block;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        font-size: 23px;
+        color: #fff;
+        background-color: red;
+        width: 40px;
+        border-radius: 0 30px 30px 0;
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
 header {
     .bgi {
         background-color: rgba(0, 0, 0, 0.558);
@@ -116,7 +220,7 @@ header {
     }
 
     .content {
-        margin-top: 15%;
+        margin-top: 20rem;
 
         button {
             background: rgba(255, 255, 255, 0.273);
@@ -160,6 +264,7 @@ header {
         .ig {
 
             .d {
+                margin-top: 30px;
                 position: relative;
                 height: 100%;
 
@@ -257,7 +362,8 @@ header {
 
     .items>div>.item {
         margin-top: 33px;
-transition: all 2s;
+        transition: all 2s;
+
         &:hover {
             box-shadow: 0 0 20px;
 
@@ -266,13 +372,15 @@ transition: all 2s;
             }
         }
 
+
+
         .icon {
             color: red;
             font-size: 30px;
         }
 
         .num {
-transition: all 2s;
+            transition: all 2s;
 
             font-size: 30px;
             color: #898686;
@@ -294,7 +402,8 @@ transition: all 2s;
         h4 {
             a {
                 color: #000;
-                border-bottom: 1px solid;
+                border-bottom: 2px solid red;
+                text-decoration: none;
             }
 
         }
@@ -435,7 +544,7 @@ transition: all 2s;
 .posts {
     .container {
         h1 {
-            margin-bottom: 60px;
+            margin: 100px 0 30px 0;
 
             small {
                 margin-right: 23px;
@@ -452,11 +561,13 @@ transition: all 2s;
             margin-bottom: 100px;
 
             .item1 {
-                border-radius: 10px;
+                border-radius: 10px 10px 0 0;
                 margin-top: 33px;
                 transition: all 2s;
+                border-radius: 10px 10px 0 0;
 
                 .img {
+                    border-radius: 10px 10px 0 0;
                     transition: all 2s;
                     position: relative;
 
@@ -469,7 +580,7 @@ transition: all 2s;
 
                     transition: all 2s;
                     position: absolute;
-                    border-radius: 10px;
+                    border-radius: 10px 10px 0 0;
 
                     top: 0;
                     width: 100%;
@@ -479,14 +590,14 @@ transition: all 2s;
                     justify-content: center;
 
                     i {
-                        opacity: 0;
-
+                        transform: scale(0);
+                        transition: all 2s;
                         color: white;
                     }
                 }
 
                 img {
-                    border-radius: 10px;
+                    border-radius: 10px 10px 0 0;
                     transition: all 2s;
 
                 }
@@ -498,7 +609,7 @@ transition: all 2s;
 
 
                         i {
-                            opacity: 1;
+                            transform: scale(1);
                         }
                     }
 
@@ -508,7 +619,7 @@ transition: all 2s;
                     }
                 }
 
-                border-radius: 10px;
+                border-radius: 10px 10px 0 0;
 
 
                 .tt {
@@ -577,13 +688,24 @@ footer {
 
         .container {
             .rtop {
+                h1 {
+                    small {
+                        color: white;
+                    }
+                }
+
                 margin-top: 150px;
+
+                .up {
+                    line-height: 36px;
+                }
 
             }
         }
 
         .foot {
             text-align: center;
+            margin: 33px;
         }
     }
 
@@ -603,7 +725,10 @@ footer {
     right: 10px;
     text-align: center;
     line-height: 50px;
-  i{
-    color: white;
-  }
+
+    i {
+        position: relative;
+        top: 8px;
+        color: white;
+    }
 }

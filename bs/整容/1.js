@@ -1,6 +1,4 @@
 $('.nav_side>ul>li').eq(3).click(function (e) {
-    console.log($('.nav_side>ul>li').eq(3).find('a')[0]);
-    console.log(e.target);
     if (!e.target.isSameNode($('.nav_side>ul>li').eq(3).find('a')[0])) {
         $(this).find('ul').toggleClass('active')
         $(this).find('span').toggleClass('active')
@@ -8,9 +6,7 @@ $('.nav_side>ul>li').eq(3).click(function (e) {
 
 })
 $('.side').click(function (e) {
-    // console.log();
     if (this.isSameNode(e.target)) {
-        console.log('ok');
         $(this).addClass('active');
     }
 })
@@ -20,16 +16,12 @@ $('.side_bottom').click(function (e) {
 })
 
 $('.asc select').click(function () {
-    console.log($(this).children().eq(0).height());
-    console.log($(this).is('dispaly'));
 })
 var start = 0
 var num = 1
 $('.side').on('touchstart', function (e) {
     start = e.targetTouches[0].pageX
-    console.log(e);
     $(this).on('touchmove', function (e) {
-        console.log(e);
     })
 })
 $('.side').on('touchend', function (e) {

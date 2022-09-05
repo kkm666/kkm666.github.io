@@ -26,6 +26,90 @@ h3 {
 img {
   width: 100%;
 }
+.box {
+  background: red;
+  margin-top: -10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box p {
+  transition: all 1s;
+  transform-origin: 0% 50%;
+  margin: 3px;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  /* background-color: #000; */
+}
+.box .click p:nth-child(1) {
+  /* background: pink; */
+  transform: rotate(45deg);
+}
+.box .click p:nth-child(3) {
+  position: relative;
+  top: 5px;
+  /* background: pink; */
+  transform: rotate(-45deg);
+}
+.box .click p:nth-child(2) {
+  opacity: 0;
+}
+.clicks {
+  overflow: hidden;
+  position: absolute;
+  top: 77px;
+  height: 0;
+  transition: all 2s;
+  color: #000 !important;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+}
+.clicks p {
+  cursor: pointer;
+  transition: all 2s;
+}
+.clicks p:nth-child(1) {
+  margin-top: 33px;
+}
+.clicks p:hover {
+  color: red;
+}
+.searchs {
+  height: 40px;
+  top: 0px;
+  right: 15px;
+  font-size: 12px;
+  border-radius: 0 30px 30px 0;
+  text-align: center;
+  position: relative;
+}
+.searchs input {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(221, 221, 221, 0.731);
+  border: 0;
+  border-radius: 30px;
+  outline: 0;
+  padding-left: 20px;
+}
+.searchs i {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  font-size: 23px;
+  color: #fff;
+  background-color: red;
+  width: 40px;
+  border-radius: 0 30px 30px 0;
+  text-align: center;
+  line-height: 40px;
+}
 header {
   background-image: url(image/b2.jpg);
   height: 800px;
@@ -94,7 +178,7 @@ header .nav .icon:hover {
   color: red;
 }
 header .content {
-  margin-top: 15%;
+  margin-top: 20rem;
 }
 header .content button {
   background: rgba(255, 255, 255, 0.273);
@@ -128,6 +212,7 @@ header .content .but:hover {
   position: relative;
 }
 .offering .container .ig .d {
+  margin-top: 30px;
   position: relative;
   height: 100%;
 }
@@ -231,7 +316,8 @@ header .content .but:hover {
 }
 .clients .items > div > .item h4 a {
   color: #000;
-  border-bottom: 1px solid;
+  border-bottom: 2px solid red;
+  text-decoration: none;
 }
 .years {
   margin-bottom: 100px;
@@ -323,7 +409,7 @@ header .content .but:hover {
   color: red;
 }
 .posts .container h1 {
-  margin-bottom: 60px;
+  margin: 100px 0 30px 0;
   text-align: center;
 }
 .posts .container h1 small {
@@ -336,11 +422,12 @@ header .content .but:hover {
 .posts .container .row .item1 {
   margin-top: 33px;
   transition: all 2s;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   box-shadow: 0 0 3px;
   font-size: 12px;
 }
 .posts .container .row .item1 .img {
+  border-radius: 10px 10px 0 0;
   transition: all 2s;
   position: relative;
   overflow: hidden;
@@ -348,7 +435,7 @@ header .content .but:hover {
 .posts .container .row .item1 .bgi {
   transition: all 2s;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -357,18 +444,19 @@ header .content .but:hover {
   justify-content: center;
 }
 .posts .container .row .item1 .bgi i {
-  opacity: 0;
+  transform: scale(0);
+  transition: all 2s;
   color: white;
 }
 .posts .container .row .item1 img {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   transition: all 2s;
 }
 .posts .container .row .item1:hover .bgi {
   background: rgba(194, 23, 23, 0.628);
 }
 .posts .container .row .item1:hover .bgi i {
-  opacity: 1;
+  transform: scale(1);
 }
 .posts .container .row .item1:hover img {
   transform: scale(1.2);
@@ -419,8 +507,15 @@ footer .bg {
 footer .bg .container .rtop {
   margin-top: 150px;
 }
+footer .bg .container .rtop h1 small {
+  color: white;
+}
+footer .bg .container .rtop .up {
+  line-height: 36px;
+}
 footer .bg .foot {
   text-align: center;
+  margin: 33px;
 }
 footer p {
   margin-bottom: 30px;
@@ -438,6 +533,8 @@ footer p {
   line-height: 50px;
 }
 .mao i {
+  position: relative;
+  top: 8px;
   color: white;
 }
 /*# sourceMappingURL=./index.css.map */
