@@ -65,7 +65,41 @@
 
         .box .d1 {
             height: 100%;
-            /* background-color: rgb(59, 25, 147); */
+            /* background-color: rgba(3, 3, 3, 0.723); */
+        }
+
+        .box .d1 h1 {
+            font-size: 50px;
+        }
+
+        .box .d1 p {
+            text-align: center;
+            position: relative;
+            top: -20px;
+            left: -30px;
+        }
+
+        .box .d1 span>a:nth-child(1) {
+            display: inline-block;
+            background-color: rgba(3, 3, 3, 0.523);
+            padding: 20px 50px;
+            border-radius: 33px;
+            border: 1px solid white;
+        }
+
+        .box .d1 span>a:nth-child(2) {
+            display: inline-block;
+            background-color: white;
+            color: #131416;
+            font-size: 22px;
+            padding: 20px 50px;
+            border-radius: 33px;
+            border: 1px solid white;
+        }
+
+        .box .d1 span>a:nth-child(2) img {
+            width: 20px;
+            margin-right: 10px;
         }
 
         .box .d5 {
@@ -83,7 +117,7 @@
             top: 0;
             z-index: 999;
             width: 1200px;
-            margin: auto;
+            margin: 33px auto;
             display: flex;
             justify-content: space-between;
         }
@@ -118,7 +152,7 @@
         .box .d1 .content {
             color: white;
             width: 30%;
-            margin: 15% auto;
+            margin: 9% auto;
         }
 
         /* .box .d1 .content span {
@@ -168,7 +202,9 @@
                 <p>全新Chrome内核浏览器，性能更强，速度更快</p>
                 <span>
                     <a>32位版本</a>
-                    <a><img src="https://se3.360simg.com/t0102fdf3201e9fcf21.png">64位版本<p>NEW</p></a>
+                    <a><img src="https://se3.360simg.com/t0102fdf3201e9fcf21.png">64位版本
+                        <!-- <p>NEW</p> -->
+                    </a>
                 </span>
             </div>
         </div>
@@ -179,7 +215,7 @@
                 <div class="line">一</div>
                 <h3 class="midTitleWord">全新Chromium内核</h3>
                 <p class="smaTitleWord smaTitle">性能强劲，快如闪电。</p>
-                <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" class="alineCenter smallDownloadBtn"></a>
+               <button> <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" class="alineCenter smallDownloadBtn">立即体验</a></button>
             </div>
             <video autoplay="" loop="" muted="">
                 <source src="https://s2.ssl.qhres2.com/static/dfeefadde568eab0.mp4" type="video/mp4">
@@ -192,7 +228,7 @@
                 <div class="line">一</div>
                 <h2 class="midTitleWord">暗夜炫黑模式</h2>
                 <p class="smaTitleWord smaTitle">定义酷，定义你。</p>
-                <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" class="alineCenter smallDownloadBtn"></a>
+                <button> <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" class="alineCenter smallDownloadBtn">立即体验</a></button>
             </div>
             <video autoplay="" loop="" muted="">
                 <source src="https://s3.ssl.qhres2.com/static/9bebcedf292f327e.mp4" type="video/mp4">
@@ -207,10 +243,10 @@
             </video>
             <div class="content">
                 <h1>极安全</h1>
-                <p>一</p>
+                <div class="line">一</div>
                 <h1>DNS加密防劫持</h1>
                 <h3>安全升级，肆意无忌。</h3>
-                <button>立即体验</button>
+                <button> <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" class="alineCenter smallDownloadBtn">立即体验</a></button>
             </div>
         </div>
         <div class="d5">
@@ -220,24 +256,60 @@
                 <div class="line">一</div>
                 <h2 class="midTitleWord">4K高清视频播放</h2>
                 <p class="smaTitleWord smaTitle">还原真实之美 ，尽显万物本色。</p>
-                <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" class="alineCenter smallDownloadBtn"></a>
+                <button> <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" class="alineCenter smallDownloadBtn">立即体验</a></button>
             </div>
             <video autoplay="" loop="" muted="">
                 <source src="https://s1.ssl.qhres2.com/static/7e7f0ec4a0cc7a66.mp4" type="video/mp4">
                 当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
             </video>
             <style>
-                .footers{
+                .d2 h1,
+                .d3 h1,
+                .d4 h1,
+                .d5 h1 {
+                    font-size: 50px;
+                }
+
+                .d2 .line,
+                .d3 .line,
+                .d4 .line,
+                .d5 .line {
+                    font-size: 30px;
+                    color: gray;
+                }
+                .d2 button,
+                .d3 button,
+                .d4 button,
+                .d5 button{
+                    padding: 10px 50px;
+                    border-radius: 50px;
+                    border:2px solid white;
+                    background-color: transparent;
+                }
+                .d2 button a,
+                .d3 button a,
+                .d4 button a,
+                .d5 button a{
+                    text-decoration: none;
+                    color:white;
+                }
+
+                .d5 video {
+                    height: 83vh;
+                }
+
+                .footers {
                     background: #131416;
                     width: 100%;
                     height: 300px;
                 }
+
                 .footer {
-                   
+
                     color: #9a9089;
                     margin: auto;
                     width: 1000px;
-                    padding: 33px 0;
+                    padding:16px 0;
                 }
 
                 .footer a {
@@ -297,7 +369,10 @@
         var dot = document.querySelectorAll(".dot li");
         var content = document.querySelectorAll(".content");
         dot[0].classList.add("active")
-        console.log(content);
+        // console.log(content);
+        window.onload = function () {
+            content[0].style.opacity = 1
+        }
         var h = window.innerHeight;
         window.onresize = function () {
             h = window.innerHeight;
@@ -312,7 +387,7 @@
         // }
         dot.forEach(function (e, i) {
             e.onmousemove = function (event) {
-                console.log(event);
+                // console.log(event);
 
 
                 box.style.marginTop = -i * h + "px"
