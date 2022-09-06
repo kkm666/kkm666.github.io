@@ -15,6 +15,7 @@
             margin: 0;
             /* height: 100vh; */
             overflow: hidden;
+            overflow-y:auto;
 
         }
 
@@ -64,6 +65,8 @@
         }
 
         .left .content h1 {
+            margin: 0;
+            padding: 6rem;
             text-align: center;
             font-size: 7rem;
         }
@@ -79,11 +82,10 @@
 
         .left .content>div:hover {
             box-shadow: 0 0 13px gray;
-            /* background-color: aliceblue; */
         }
 
         .right {
-            width: 100%;
+           
             background-color: aqua;
         }
 
@@ -184,7 +186,7 @@
 
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
-                        <a href="#"> vue</a>
+                        <a href="#"> <iframe src="/js/九宫格抽奖.html" frameborder="0"></iframe></a>
                     </div>
                 </div>
 
@@ -199,7 +201,8 @@
         var bs = document.querySelector(".itembs");
         var all = document.querySelectorAll(".left .all>div");
         var rall = document.querySelectorAll(".right .rall>div");
-
+        rall[0].style.display = "block";
+        all[0].style.backgroundColor = "antiquewhite";
         all.forEach(function (e, i) {
             e.onclick = function () {
                 rall.forEach(function (ee, ii) {
