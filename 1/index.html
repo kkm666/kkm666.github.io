@@ -15,7 +15,7 @@
             margin: 0;
             /* height: 100vh; */
             overflow: hidden;
-            overflow-y:auto;
+            overflow-y: auto;
 
         }
 
@@ -25,9 +25,21 @@
         }
 
         .left {
-            width: 30%;
-            /* height: 100vh; */
+            width: 101rem;
+            height: 100vh;
             background-color: pink;
+        }
+
+        .left .lcontainer {
+            background-color: pink;
+            width: 101rem;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         .left .ltop {
@@ -85,7 +97,7 @@
         }
 
         .right {
-           
+            width: 275rem;
             background-color: aqua;
         }
 
@@ -115,27 +127,27 @@
 <body>
 
     <div class="left">
-        <div class="ltop">
-            <img src="./image/ke.jpg" alt="">
-        </div>
-        <div class="content all">
-            <div class="bootstrap">
-                <h1>Bootstrap</h1>
+        <div class="lcontainer">
+            <div class="ltop">
+                <img src="./image/ke.jpg" alt="">
             </div>
-            <div class="js">
-                <h1>JS</h1>
+            <div class="content all">
+                <div class="bootstrap">
+                    <h1>Bootstrap</h1>
+                </div>
+                <div class="js">
+                    <h1>JS</h1>
+                </div>
+                <div class="jquery">
+                    <h1>jQuery</h1>
+                </div>
+                <div class="css3">
+                    <h1>HTML5+CSS3</h1>
+                </div>
+                <div class="vue">
+                    <h1>Vue</h1>
+                </div>
             </div>
-            <div class="jquery">
-                <h1>jQuery</h1>
-            </div>
-            <div class="css3">
-                <h1>HTML5+CSS3</h1>
-            </div>
-            <div class="vue">
-                <h1>Vue</h1>
-            </div>
-
-
         </div>
     </div>
 
@@ -170,7 +182,7 @@
                         <a href="/jq/手风琴.html"> <img src="./image/sfq.jpg" alt=""></a>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 imgg">
-                        <a href="/jq/放大镜.html"><img src="./image/fdj.jpg" alt=""></a> 
+                        <a href="/jq/放大镜.html"><img src="./image/fdj.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="row itembs">
