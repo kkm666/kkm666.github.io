@@ -28,7 +28,7 @@ img {
 }
 .box {
   background: red;
-  margin-top: -10px;
+  margin-top: 10px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -70,7 +70,6 @@ img {
 }
 .clicks p {
   cursor: pointer;
-  transition: all 2s;
 }
 .clicks p:nth-child(1) {
   margin-top: 33px;
@@ -117,15 +116,51 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 }
+header .content {
+  margin-top: 20rem;
+}
+header .content button {
+  background: rgba(255, 255, 255, 0.273);
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 30px;
+}
+header .content h1 {
+  color: #EEEEEE;
+  text-transform: uppercase;
+  word-spacing: 20px;
+  margin: 30px 0;
+}
+header .content h1 small {
+  font-size: 36px;
+  color: #EEEEEE;
+}
+header .content .but {
+  background-color: red;
+  transition: all 2s;
+}
+header .content .but:hover {
+  background-color: #ff8c00;
+}
 header .bgi {
   background-color: rgba(0, 0, 0, 0.558);
   height: 100%;
 }
 header .nav {
-  margin-top: 30px;
   line-height: 40px;
   color: white;
   font-weight: bolder;
+}
+header .nav .topnav {
+  z-index: 999;
+  width: 100vw;
+  color: #000;
+}
+header .nav .topnav h1 {
+  margin-top: 12px;
+}
+header .nav .topnav .list {
+  line-height: 70px;
 }
 header .nav .item {
   transition: all 2s;
@@ -133,13 +168,6 @@ header .nav .item {
 }
 header .nav .item:hover {
   color: red;
-}
-header .nav h1 {
-  margin: 0;
-}
-header .nav h1 small {
-  font-size: 36px;
-  color: #EEEEEE;
 }
 header .nav input {
   width: 100%;
@@ -154,9 +182,9 @@ header .nav input::-webkit-input-placeholder {
   color: #EEEEEE;
 }
 header .nav .search {
-  height: 100%;
+  height: 40px;
   position: absolute;
-  top: 0px;
+  top: 15px;
   right: 15px;
   font-size: 12px;
   background-color: red;
@@ -166,37 +194,22 @@ header .nav .search {
 }
 header .nav .search i {
   position: relative;
-  top: 3px;
+  top: -11px;
   right: 3px;
 }
 header .nav .icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 70px;
   transition: all 2s;
-  line-height: 50px;
   cursor: pointer;
+}
+header .nav .icon i {
+  height: 25px;
 }
 header .nav .icon:hover {
   color: red;
-}
-header .content {
-  margin-top: 20rem;
-}
-header .content button {
-  background: rgba(255, 255, 255, 0.273);
-  border: 0;
-  border-radius: 30px;
-  padding: 0 30px;
-}
-header .content h1 {
-  text-transform: uppercase;
-  word-spacing: 20px;
-  margin: 30px 0;
-}
-header .content .but {
-  background-color: red;
-  transition: all 2s;
-}
-header .content .but:hover {
-  background-color: #ff8c00;
 }
 .offering .container {
   margin-top: 100px;

@@ -35,7 +35,7 @@ img {
 
 .box {
     background: red;
-    margin-top: -10px;
+    margin-top: 10px;
     width: 50px;
     height: 50px;
     display: flex;
@@ -88,7 +88,7 @@ img {
 
     p {
         cursor: pointer;
-        transition: all 2s;
+        // transition: all 2s;
 
         &:nth-child(1) {
             margin-top: 33px;
@@ -138,7 +138,42 @@ img {
 }
 
 header {
-   
+    .content {
+        margin-top: 20rem;
+
+        button {
+
+            background: rgba(255, 255, 255, 0.273);
+            border: 0;
+            border-radius: 30px;
+            padding: 15px 30px;
+        }
+
+
+        h1 {
+            color: #EEEEEE;
+            text-transform: uppercase;
+            word-spacing: 20px;
+            margin: 30px 0;
+            // margin: 0;
+
+            small {
+                font-size: 36px;
+                color: #EEEEEE
+            }
+        }
+
+        .but {
+            background-color: red;
+            transition: all 2s;
+
+            &:hover {
+                background-color: rgb(255, 140, 0);
+            }
+        }
+
+    }
+
     .bgi {
         background-color: rgba(0, 0, 0, 0.558);
         height: 100%;
@@ -151,10 +186,28 @@ header {
     background-repeat: no-repeat;
 
     .nav {
-        margin-top: 30px;
+        // margin-top: 30px;
         line-height: 40px;
         color: white;
         font-weight: bolder;
+
+        .topnav {
+            z-index: 999;
+
+            h1 {
+                margin-top: 12px;
+            }
+
+            .list {
+                line-height: 70px;
+            }
+
+            width: 100vw;
+            // position: fixed;
+            // background: #fff;
+            color: #000;
+
+        }
 
         .item {
             transition: all 2s;
@@ -165,14 +218,6 @@ header {
             }
         }
 
-        h1 {
-            margin: 0;
-
-            small {
-                font-size: 36px;
-                color: #EEEEEE
-            }
-        }
 
         input {
             width: 100%;
@@ -191,9 +236,9 @@ header {
         }
 
         .search {
-            height: 100%;
+            height: 40px;
             position: absolute;
-            top: 0px;
+            top: 15px;
             right: 15px;
             font-size: 12px;
             background-color: red;
@@ -203,16 +248,23 @@ header {
 
             i {
                 position: relative;
-                top: 3px;
+                top: -11px;
                 right: 3px;
 
             }
         }
 
         .icon {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            height: 70px;
             transition: all 2s;
-            line-height: 50px;
             cursor: pointer;
+
+            i {
+                height: 25px;
+            }
 
             &:hover {
                 color: red;
@@ -220,32 +272,7 @@ header {
         }
     }
 
-    .content {
-        margin-top: 20rem;
 
-        button {
-            background: rgba(255, 255, 255, 0.273);
-            border: 0;
-            border-radius: 30px;
-            padding: 0 30px;
-        }
-
-        h1 {
-            text-transform: uppercase;
-            word-spacing: 20px;
-            margin: 30px 0;
-        }
-
-        .but {
-            background-color: red;
-            transition: all 2s;
-
-            &:hover {
-                background-color: rgb(255, 140, 0);
-            }
-        }
-
-    }
 }
 
 .offering {
