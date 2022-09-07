@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: calc(100vw/375);">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
         .box {
-            width: 300px;
             display: flex;
             flex-wrap: wrap;
-            /* background: pink; */
         }
 
         body {
@@ -31,34 +32,27 @@
         }
 
         .boxx div {
-
-            flex-shrink: 0;
-            /* background: pink; */
             display: flex;
-            /* flex-wrap:wrap; */
-            /* outline: 1px solid saddlebrown; */
         }
 
         .boxx div div {
-            width: 100px;
+            width: 26rem;
             display: flex;
             flex-wrap: wrap;
         }
 
         span {
             display: block;
-            width: 30%;
-            height: 33px;
+            width: 8rem;
+            height: 8rem;
             transition: all 0.6s;
             transform: scale(0.5);
         }
 
         span.bg {
             transform: scale(1);
-            outline: 1px solid pink;
+            outline: 0.5rem solid rgba(255, 192, 203, 0.607);
             display: block;
-            width: 30%;
-            height: 33px;
             background: aqua;
         }
 
@@ -70,35 +64,45 @@
         p.sp {
             outline: 1px solid pink;
             background: pink;
-            width: 33px;
-            height: 33px;
-            margin: 33px;
+            width: 8rem;
+            height: 8rem;
+            margin: 8rem;
         }
     </style>
 </head>
 
 <body>
-    <div class="boxx">
-        <div class="hh">
-            <div class="s1"></div>
-            <div class="s2"></div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="boxx">
+                    <div class="hh">
+                        <div class="s1"></div>
+                        <div class="s2"></div>
+                    </div>
+                    <div class="dot">
+                        <p class="sp"></p>
+                        <p class="sp"></p>
+                    </div>
+                    <div class="mm">
+                        <div class="s1"></div>
+                        <div class="s2"></div>
+                    </div>
+                    <div class="dot">
+                        <p class="sp"></p>
+                        <p class="sp"></p>
+                    </div>
+                    <div class="ss">
+                        <div class="s1"></div>
+                        <div class="s2"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="dot">
-            <p class="sp"></p>
-            <p class="sp"></p>
-        </div>
-        <div class="mm">
-            <div class="s1"></div>
-            <div class="s2"></div>
-        </div>
-        <div class="dot">
-            <p class="sp"></p>
-            <p class="sp"></p>
-        </div>
-        <div class="ss">
-            <div class="s1"></div>
-            <div class="s2"></div>
-        </div>
+
     </div>
 
     <script>

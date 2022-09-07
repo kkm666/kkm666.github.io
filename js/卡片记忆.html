@@ -90,8 +90,10 @@
                             }
                         }
                         if (tmp.length == 2) {
-                            tmp[0].classList.remove("open")
-                            tmp[1].classList.remove("open")
+                            setTimeout(() => {
+                                tmp[0].classList.remove("open")
+                                tmp[1].classList.remove("open")
+                            }, 1000)
                             if (tmp[0].innerHTML == tmp[1].innerHTML) {
                                 tmp[0].classList.add("bg")
                                 tmp[1].classList.add("bg")

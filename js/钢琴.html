@@ -215,7 +215,7 @@
 
                 // console.log(this===kong[0].node)
                 if (this === kong[0].node) {
-                    
+
                     setInterval(dj, 20);
                     console.log(11)
                 }
@@ -233,7 +233,7 @@
                     _this.node.classList.add("click")
                     // console.log(_this)
                     if (score % 10 == 0) {
-                        seep += 0.1;
+                        seep += 0.006;
                     }
                     scoreEl.innerHTML = ""
                     score.toString().split("").forEach(function (e, i) {
@@ -285,11 +285,11 @@
             // console.log(first)
             if (first && first.y >= 5) {//5就是页面的高度减去小盒子的高度
                 // clearInterval(1)//1就是清除一个，数字几就清除几次
-                for(var i =0;i<=score;i++){
+                for (var i = 0; i <= score; i++) {
                     clearInterval(i)
                 }
                 endscore.innerHTML = "你的得分是" + score;
-            end.style.display = "block";
+                end.style.display = "block";
             }
             var hidden = kong.filter(function (e) {
                 return e.pding
@@ -309,6 +309,10 @@
         //  if(none.length)
         //     none[0].node.click();
         // },500)
+        var content = document.querySelector(".content");
+        content.onclick = function () {
+            location.reload();
+        }
     </script>
 </body>
 
