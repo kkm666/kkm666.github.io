@@ -26,6 +26,7 @@
         }
 
         .box div {
+            /* transition: all 1s; */
             width: 100px;
             height: 100px;
             background: aquamarine;
@@ -77,33 +78,37 @@
             var node = document.createElement("div");
             node.innerHTML = "<i class='fa " + e + "'></i>"
             box.appendChild(node);
+            var flag = true;
+            function click() {
 
-            node.onclick = function () {
-                if (!this.classList.contains("bg")) {
+                if (!this.classList.contains("bg") && flag) {
+
                     node.classList.add("open");
-
-                    setInterval(function () {
-                        var tmp = []
-                        for (let i = 0; i < box.children.length; i++) {
-                            if (box.children[i].classList.contains("open")) {
-                                tmp.push(box.children[i]);
-                            }
+                    var tmp = []
+                    for (let i = 0; i < box.children.length; i++) {
+                        if (box.children[i].classList.contains("open")) {
+                            tmp.push(box.children[i]);
                         }
-                        if (tmp.length == 2) {
-                            setTimeout(() => {
-                                tmp[0].classList.remove("open")
-                                tmp[1].classList.remove("open")
-                            }, 1000)
-                            if (tmp[0].innerHTML == tmp[1].innerHTML) {
-                                tmp[0].classList.add("bg")
-                                tmp[1].classList.add("bg")
+                    }
+                    if (tmp.length == 2) {
+                        flag = false
+                        setTimeout(() => {
 
-                            }
+                            tmp[0].classList.remove("open")
+                            tmp[1].classList.remove("open")
+                            flag = true
+                        }, 600)
+                        if (tmp[0].innerHTML == tmp[1].innerHTML) {
+                            tmp[0].classList.add("bg")
+                            tmp[1].classList.add("bg")
+
                         }
-                    }, 1000)
+                    }
                 }
             }
+            node.onclick = click
         })
+
     </script>
 </body>
 
