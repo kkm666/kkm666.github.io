@@ -24,23 +24,34 @@
         }
 
         .box .left {
-            /* overflow: hidden; */
+            overflow: hidden;
             border-radius: 13px;
             width: 70%;
             height: 360px;
             box-shadow: 0 0 23px #C3A27F;
             position: relative;
             left: -66px;
-            /* transform: scale(1.2); */
-            transition: all 1s;
+            transition: all 3s;
+        }
+
+        @keyframes kk {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(1.5);
+            }
         }
 
         .box .left img {
-            width: 100%;
+            /* width: 100%;*/
             position: absolute;
             height: 100%;
             border-radius: 13px;
-            transition: all 3s;
+            transition: all 3s ;
             transform: scale(1);
         }
 
@@ -149,16 +160,16 @@
     </div>
     <script>
         var i = document.querySelectorAll(".right i");
-        var left = document.querySelector(".left");
+        var left = document.querySelectorAll(".left");
         var h3 = document.querySelector("h3");
         var h5 = document.querySelector("h5");
         var video = document.querySelector("video");
-        var imgs = document.querySelectorAll("img");
+        var img = document.querySelector("img");
         var lines = document.querySelector(".lines");
         var end = document.querySelector(".end");
         var start = document.querySelector(".start");
 
-        var num = 0;
+        var num = 1;
         var love = true;
         var hh3 = ["Leonard Cohen", "Mody", "Norm Ender"]
         var hh5 = ["Everybody Knows", "Extreme Ways", "Mekann Sahibi"]
@@ -171,44 +182,27 @@
                 love = true
             }
         }
-        imgs.forEach(function (e, i) {
-            imgs[i].style.opacity = 0
-        })
-        imgs[0].style.opacity = 1
         i[2].onclick = function () {//上
-            imgs.forEach(function (e, i) {
-                imgs[i].style.opacity = 0
-                imgs[i].style.transform = ' scale(1.2)'
-
-            })
-            console.log(num);
+            left.style.animationName = "kk";
             i[4].className = ("fa  fa-6x fa-play-circle");
             lines.style.width = 0 + "%"
             num--
-            num < 0 ? num = 2 : num
-            imgs[num].style.opacity = 1
-            imgs[num].style.transform = ' scale(1)'
+            num < 1 ? num = 3 : num
             video.src = "./yin/" + num + ".mp3"
-            h3.innerHTML = hh3[num]
-            h5.innerHTML = hh5[num]
+            img.src = "/jq/image/" + (16 + num) + ".webp"
+            h3.innerHTML = hh3[num - 1]
+            h5.innerHTML = hh5[num - 1]
         }
         i[3].onclick = function () {//下
-            imgs.forEach(function (e, i) {
-                imgs[i].style.opacity = 0
-                imgs[i].style.transform = ' scale(1.2)'
-
-            })
             i[4].className = ("fa  fa-6x fa-play-circle");
             lines.style.width = 0 + "%"
             num++
-            num > 2 ? num = 0 : num
-            imgs[num].style.opacity = 1
-            imgs[num].style.transform = ' scale(1)'
-            h3.innerHTML = hh3[num]
-            h5.innerHTML = hh5[num]
-
+            num > 3 ? num = 1 : num
+            img.src = "/jq/image/" + (16 + num) + ".webp"
             video.src = "./yin/" + num + ".mp3";
 
+            h3.innerHTML = hh3[num - 1]
+            h5.innerHTML = hh5[num - 1]
         }
         var pd = false
         i[4].onclick = function () {//stop?
@@ -247,6 +241,11 @@
             // input.value = (video.currentTime / video.duration) * 100
         }
     </script>
+    <style>
+        b {
+            animation-name: kk;
+        }
+    </style>
 </body>
 
 </html>
